@@ -16,6 +16,7 @@ import {
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Ionicons from "react-native-vector-icons/Ionicons"; // importando ícones
 
+//tela default/inicial de login
 function LoginScreen() {
   const navigation = useNavigation();
 
@@ -175,6 +176,7 @@ function RegisterScreen() {
   );
 }
 
+//tela de redefinição de senha
 function ForgetPassword() {
   const navigation = useNavigation();
 
@@ -193,7 +195,6 @@ function ForgetPassword() {
     }
   };
 
-  //print para informar o email que vai ser resetado a senha
   return (
     <View style={styles.container3}>
       <Text style={styles.title1}>Refefinir senha</Text>
@@ -315,12 +316,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#f2f2f2",
   },
-  Buttons: {
-    fontSize: 10,
-    color: "#ff0000ff",
-  },
 });
 
+//navegação entre telas
 const RootStack = createNativeStackNavigator({
   initialRouteName: "Login",
   screens: {
